@@ -5,6 +5,13 @@
   <artifactId>projectA</artifactId>  
   <packaging>pom</packaging>  
   <version>1.0-SNAPSHOT</version>  
+ 
+ 
+<modules>
+    <module>bot</module>
+    <module>link-parser</module>
+	<module>scrapper</module>
+</modules>
 
 <dependencyManagement>
   <dependencies>
@@ -23,7 +30,15 @@
       <type>pom</type>
       <scope>import</scope>
     </dependency>
-  </dependencies>
+  
+  
+    <dependency>
+	  <groupId>org.jetbrains</groupId>
+      <artifactId>annotations</artifactId>
+	  <version>23.0.1</version>
+	  <scope>provided</scope>
+	</dependency>
+   </dependencies>
 </dependencyManagement>
 
 <build>
